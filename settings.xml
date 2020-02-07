@@ -4,7 +4,7 @@
                       https://maven.apache.org/xsd/settings-1.0.0.xsd">
   <servers>
     <server>
-      <id>Maven</id>
+      <id>Maven2</id>
       <username>cherukumanideep</username>
       <password>bmzngmbu2g754maqqdnrpldigcmfzsptnibdynx7hg4v3ovsvu6q</password>
     </server>
