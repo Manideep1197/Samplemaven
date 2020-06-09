@@ -19,14 +19,10 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: |
-        mvn -B package --file pom.xml
-        cd /home/runner/work/Samplemaven/Samplemaven/target/azure-functions/javafunctions
-        ls -lart
- #   - name: Upload Build Artifact
- #     uses: actions/upload-artifact@v2
-  #    with:
-   #       name: drop
-    #      path: $WORKSPACEDIR
-     # env:
-      #    WORKSPACEDIR: ${{github.workspace}}
+      run: mvn -B package --file pom.xml
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Sample maven
+        path: ${{GITHUB.WORKSPACE}}/Samplemaven/target/azure-functions/javafunctions
+        
