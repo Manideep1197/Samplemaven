@@ -20,5 +20,10 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Upload a Build Artifact
+    - name: Upload Build Artifact
       uses: actions/upload-artifact@v2
+      with:
+          name: drop
+          path: $WORKPACEDIR
+      env:
+          WORKSPACEDIR: ${{github.workspace}}
